@@ -5,7 +5,7 @@ plugins {
 ext {
     commonConfigurationVersion = '2.9.0'
     cucumberVersion = '7.14.0'
-    appiumJavaClientVersion = '9.1.0'
+    appiumJavaClientVersion = '7.6.0'
     seleniumRemoteDriverVersion = '2.44.0'
     commonsBeanUtils = '1.9.4'
 }
