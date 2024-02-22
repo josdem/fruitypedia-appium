@@ -26,7 +26,7 @@ public class MainTest extends BaseTest {
     }
 
     @Then("I validate categories are visible")
-    public void shouldValidateLauncherMessage() {
+    public void shouldValidateCategoriesExist() {
         log.info("Running: I validate categories are visible " + LocalDate.now());
         WebElement listView = driver.findElement(By.id("listViewCategories"));
         assertNotNull(listView);
