@@ -5,6 +5,9 @@ plugins {
 
 ext {
     commonConfigurationVersion = '2.9.0'
+    cucumberVersion = '7.15.0'
+    appiumJavaClientVersion = '9.1.0'
+    seleniumRemoteDriverVersion = '2.44.0'
 }
 android {
     namespace 'com.josdem.fruitypedia.appium'
@@ -27,11 +30,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
     }
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = '11'
     }
 }
 
@@ -40,8 +43,12 @@ dependencies {
     implementation 'androidx.core:core-ktx:1.9.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.11.0'
+    implementation "org.seleniumhq.selenium:selenium-remote-driver:$seleniumRemoteDriverVersion"
     implementation "org.apache.commons:commons-configuration2:$commonConfigurationVersion"
+    implementation "io.appium:java-client:$appiumJavaClientVersion"
     testImplementation 'junit:junit:4.13.2'
+    testImplementation "io.cucumber:cucumber-java:$cucumberVersion"
+    testImplementation "io.cucumber:cucumber-junit:$cucumberVersion"
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 }
