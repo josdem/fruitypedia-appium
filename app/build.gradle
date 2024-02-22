@@ -8,14 +8,15 @@ ext {
     cucumberVersion = '7.15.0'
     appiumJavaClientVersion = '9.1.0'
     seleniumRemoteDriverVersion = '2.44.0'
+    commonsBeanUtils = '1.9.4'
 }
 android {
     namespace 'com.josdem.fruitypedia.appium'
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
         applicationId "com.josdem.fruitypedia.appium"
-        minSdk 33
+        minSdk 34
         targetSdk 33
         versionCode 1
         versionName "1.0"
@@ -43,6 +44,7 @@ dependencies {
     implementation 'androidx.core:core-ktx:1.9.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.11.0'
+    implementation "commons-beanutils:commons-beanutils:$commonsBeanUtils"
     implementation "org.seleniumhq.selenium:selenium-remote-driver:$seleniumRemoteDriverVersion"
     implementation "org.apache.commons:commons-configuration2:$commonConfigurationVersion"
     implementation "io.appium:java-client:$appiumJavaClientVersion"
