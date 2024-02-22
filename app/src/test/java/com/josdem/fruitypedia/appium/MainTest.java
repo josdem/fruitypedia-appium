@@ -1,6 +1,5 @@
 package com.josdem.fruitypedia.appium;
 
-import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
 import org.openqa.selenium.By;
