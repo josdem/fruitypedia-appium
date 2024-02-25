@@ -10,7 +10,7 @@ import java.time.LocalDate;
 import java.util.logging.Logger;
 
 import io.appium.java_client.android.AndroidDriver;
-import io.cucumber.java.en.Then;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.When;
 
 public class MainTest extends BaseTest {
@@ -26,7 +26,7 @@ public class MainTest extends BaseTest {
         driver = getDriver();
     }
 
-    @Then("I validate categories are visible")
+    @And("I validate categories are visible")
     public void shouldValidateCategoriesExist() {
         log.info("Running: I validate categories are visible " + LocalDate.now());
         WebElement listView = driver.findElement(By.id("listViewCategories"));
@@ -34,4 +34,10 @@ public class MainTest extends BaseTest {
         textView = driver.findElement(By.id("categoryTextView"));
         assertEquals("Healing", textView.getText());
     }
+    @And("I should be able to click in the category")
+    public void shouldClickInCategory() {
+        log.info("Running: I should be able to click in the category at " + LocalDate.now());
+        waitForElement(textView).click();
+    }
+
 }
