@@ -1,5 +1,6 @@
 package com.josdem.fruitypedia.appium;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
 import org.openqa.selenium.By;
@@ -14,6 +15,7 @@ import io.cucumber.java.en.When;
 
 public class MainTest extends BaseTest {
 
+    private WebElement textView;
     private AndroidDriver driver;
 
     private Logger log = Logger.getLogger(this.getClass().getName());
@@ -29,5 +31,7 @@ public class MainTest extends BaseTest {
         log.info("Running: I validate categories are visible " + LocalDate.now());
         WebElement listView = driver.findElement(By.id("listViewCategories"));
         assertNotNull(listView);
+        textView = driver.findElement(By.id("categoryTextView"));
+        assertEquals("Healing", textView.getText());
     }
 }
