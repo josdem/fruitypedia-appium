@@ -17,6 +17,7 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.nativekey.AndroidKey;
 import io.appium.java_client.android.nativekey.KeyEvent;
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class MainTest extends BaseTest {
@@ -72,6 +73,13 @@ public class MainTest extends BaseTest {
     @And("I should back to beverage section")
     public void shouldBackToBeverageSection() throws Exception {
         log.info("Running: I should back to the beverage section at " + LocalDate.now());
+        driver.pressKey(new KeyEvent(AndroidKey.BACK));
+        Sleeper.SYSTEM_SLEEPER.sleep(Duration.ofSeconds(timeToSleep));
+    }
+
+    @Then("I should back to category section")
+    public void shouldBackToCategorySection() throws Exception {
+        log.info("Running: I should back to the category section at " + LocalDate.now());
         driver.pressKey(new KeyEvent(AndroidKey.BACK));
         Sleeper.SYSTEM_SLEEPER.sleep(Duration.ofSeconds(timeToSleep));
     }

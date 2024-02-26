@@ -7,3 +7,4 @@ Feature: Category to recipe user flow
     And I should be able to click in a beverage
     And I should be able to view a recipe
     And I should back to beverage section
+    Then I should back to category section
