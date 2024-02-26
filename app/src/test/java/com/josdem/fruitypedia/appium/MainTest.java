@@ -54,5 +54,13 @@ public class MainTest extends BaseTest {
         waitForElement(textView).click();
     }
 
+    @And("I should be able to view a recipe")
+    public void shouldViewRecipe() {
+        log.info("Running: I should be able to view a recipe at " + LocalDate.now());
+        assertNotNull(driver.findElement(By.id("name")));
+        assertNotNull(driver.findElement(By.id("image")));
+        assertNotNull(driver.findElement(By.id("ingredients")));
+        assertNotNull(driver.findElement(By.id("recipe")));
+    }
 
 }
