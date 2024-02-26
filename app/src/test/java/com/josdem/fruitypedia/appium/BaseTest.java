@@ -4,10 +4,14 @@ import com.josdem.fruitypedia.appium.service.AppiumService;
 import com.josdem.fruitypedia.appium.service.impl.AppiumServiceImpl;
 import com.josdem.fruitypedia.appium.util.ConfigurationReader;
 
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.IOException;
 import java.net.URL;
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 import io.appium.java_client.android.AndroidDriver;
@@ -25,5 +29,11 @@ public class BaseTest {
             driver.manage().timeouts().implicitlyWait(Long.parseLong(ConfigurationReader.getProperty("appium.wait")), TimeUnit.SECONDS);
         }
         return driver;
+    }
+
+    public static WebElement waitForElement(WebElement element){
+        WebDriverWait wait =  new WebDriverWait(driver, Duration.ofSeconds(Long.parseLong(ConfigurationReader.getProperty("appium.timeout"))));
+        wait.until(ExpectedConditions.visibilityOf(element));
+        return element;
     }
 }
