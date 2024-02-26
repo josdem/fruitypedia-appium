@@ -3,3 +3,4 @@ Feature: Category to recipe user flow
     When I launch the application
     And I validate categories are visible
     And I should be able to click in the category
+    And I should be able to list beverages

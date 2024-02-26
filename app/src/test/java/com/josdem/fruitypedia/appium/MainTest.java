@@ -34,10 +34,19 @@ public class MainTest extends BaseTest {
         textView = driver.findElement(By.id("categoryTextView"));
         assertEquals("Healing", textView.getText());
     }
+
     @And("I should be able to click in the category")
     public void shouldClickInCategory() {
         log.info("Running: I should be able to click in the category at " + LocalDate.now());
         waitForElement(textView).click();
+    }
+    @And("I should be able to list beverages")
+    public void shouldListBeverages() throws Exception {
+        log.info("Running: I should be able to list beverages at " + LocalDate.now());
+        textView = driver.findElement(By.id("beverageTextView"));
+
+        log.info("Beverages container and beverage list are there");
+        assertEquals("Anti-constipation Smoothie", textView.getText());
     }
 
 }
