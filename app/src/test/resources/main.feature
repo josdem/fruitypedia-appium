@@ -4,3 +4,4 @@ Feature: Category to recipe user flow
     And I validate categories are visible
     And I should be able to click in the category
     And I should be able to list beverages
+    And I should be able to click in a beverage

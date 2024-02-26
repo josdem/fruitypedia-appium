@@ -41,12 +41,18 @@ public class MainTest extends BaseTest {
         waitForElement(textView).click();
     }
     @And("I should be able to list beverages")
-    public void shouldListBeverages() throws Exception {
+    public void shouldListBeverages() {
         log.info("Running: I should be able to list beverages at " + LocalDate.now());
         textView = driver.findElement(By.id("beverageTextView"));
 
         log.info("Beverages container and beverage list are there");
         assertEquals("Anti-constipation Smoothie", textView.getText());
     }
+    @And("I should be able to click in a beverage")
+    public void shouldClickInBeverage() {
+        log.info("Running: I should be able to click in a beverage at " + LocalDate.now());
+        waitForElement(textView).click();
+    }
+
 
 }
