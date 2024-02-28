@@ -5,12 +5,10 @@ import com.josdem.fruitypedia.appium.util.ConfigurationReader;
 
 import org.openqa.selenium.remote.DesiredCapabilities;
 
-import java.io.IOException;
-
 public class AppiumServiceImpl implements AppiumService {
 
     @Override
-    public void setCapabilities(DesiredCapabilities capabilities) throws IOException {
+    public void setCapabilities(DesiredCapabilities capabilities) {
         capabilities.setCapability("deviceName", ConfigurationReader.getProperty("device.name"));
         capabilities.setCapability("platformName", ConfigurationReader.getProperty("device.platform"));
         capabilities.setCapability("platformVersion", ConfigurationReader.getProperty("device.version"));
