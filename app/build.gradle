@@ -8,6 +8,7 @@ ext {
     appiumJavaClientVersion = '8.6.0'
     seleniumRemoteDriverVersion = '3.14.0'
     commonsBeanUtils = '1.9.4'
+    junitVersion = '4.13.2'
 }
 android {
     namespace 'com.josdem.fruitypedia.appium'
@@ -40,9 +41,7 @@ dependencies {
     implementation "org.seleniumhq.selenium:selenium-remote-driver:$seleniumRemoteDriverVersion"
     implementation "org.apache.commons:commons-configuration2:$commonConfigurationVersion"
     implementation "io.appium:java-client:$appiumJavaClientVersion"
-    testImplementation 'junit:junit:4.13.2'
+    testImplementation "junit:junit:$junitVersion"
     testImplementation "io.cucumber:cucumber-java:$cucumberVersion"
     testImplementation "io.cucumber:cucumber-junit:$cucumberVersion"
-    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 }
