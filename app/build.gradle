@@ -1,39 +1,14 @@
 plugins {
-    id 'com.android.application'
+    id 'java'
 }
 
 ext {
     commonConfigurationVersion = '2.9.0'
     cucumberVersion = '7.15.0'
-    appiumJavaClientVersion = '8.6.0'
-    seleniumRemoteDriverVersion = '3.14.0'
+    appiumJavaClientVersion = '9.0.0'
+    seleniumRemoteDriverVersion = '4.14.1'
     commonsBeanUtils = '1.9.4'
     junitVersion = '4.13.2'
-}
-android {
-    namespace 'com.josdem.fruitypedia.appium'
-    compileSdk 34
-
-    defaultConfig {
-        applicationId "com.josdem.fruitypedia.appium"
-        minSdk 33
-        targetSdk 33
-        versionCode 1
-        versionName "1.0"
-
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-    }
-
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        }
-    }
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_17
-        targetCompatibility JavaVersion.VERSION_17
-    }
 }
 
 dependencies {
@@ -44,4 +19,9 @@ dependencies {
     testImplementation "junit:junit:$junitVersion"
     testImplementation "io.cucumber:cucumber-java:$cucumberVersion"
     testImplementation "io.cucumber:cucumber-junit:$cucumberVersion"
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
 }
