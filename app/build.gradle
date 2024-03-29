@@ -16,9 +16,9 @@ dependencies {
     implementation "org.seleniumhq.selenium:selenium-remote-driver:$seleniumRemoteDriverVersion"
     implementation "org.apache.commons:commons-configuration2:$commonConfigurationVersion"
     implementation "io.appium:java-client:$appiumJavaClientVersion"
-    testImplementation "junit:junit:$junitVersion"
     testImplementation "io.cucumber:cucumber-java:$cucumberVersion"
     testImplementation "io.cucumber:cucumber-junit:$cucumberVersion"
+    testImplementation "junit:junit:$junitVersion"
 }
 
 java {
