@@ -12,9 +12,7 @@ import java.io.IOException;
 import java.time.Duration;
 
 public class CommonCommands extends BasePage {
-    public CommonCommands() throws IOException {
-        super();
-    }
+    public CommonCommands() throws IOException {}
 
     public static WebElement waitForElement(RemoteWebElement element){
         WebDriverWait wait =  new WebDriverWait(driver, Duration.ofSeconds(Long.parseLong(ConfigurationReader.getProperty("appium.timeout"))));

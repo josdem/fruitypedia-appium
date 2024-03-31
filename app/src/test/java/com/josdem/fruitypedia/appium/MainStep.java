@@ -27,8 +27,7 @@ public class MainStep {
 
     private Logger log = Logger.getLogger(this.getClass().getName());
 
-    public MainStep() throws IOException {
-    }
+    public MainStep() throws IOException {}
 
     @Given("A categories view")
     public void shouldValidateCategoriesExist() {
