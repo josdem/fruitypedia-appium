@@ -5,7 +5,7 @@ Fruitypedia Appium
 
 #### Requirements
 
-- [Appium Server](https://appium.io/) version: `2.2.2`
+- [Appium Server](https://appium.io/) version: `v2.5.1`
 
 #### To run the project
 ```bash
