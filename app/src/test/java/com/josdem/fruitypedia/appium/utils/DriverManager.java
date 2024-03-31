@@ -22,9 +22,14 @@ public class DriverManager {
         if (driver == null) {
             appiumService.setCapabilities(capabilities);
             driver = new AndroidDriver(new URL(ConfigurationReader.getProperty("appium.server")), capabilities);
-            driver.manage().timeouts().implicitlyWait(Long.parseLong(ConfigurationReader.getProperty("appium.wait")), TimeUnit.SECONDS);
         }
         return driver;
     }
 
+    public static void quitDriver() {
+        if (driver != null) {
+            driver.quit();
+            driver = null;
+        }
+    }
 }
