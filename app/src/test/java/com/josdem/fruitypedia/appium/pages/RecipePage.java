@@ -24,7 +24,6 @@ public class RecipePage extends BasePage {
 
 
     public RecipePage() throws IOException {
-        super();
     }
 
     public void validateRecipe() {

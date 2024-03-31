@@ -17,9 +17,7 @@ public class BeveragePage extends BasePage {
     private RemoteWebElement textView;
 
 
-    public BeveragePage() throws IOException {
-        super();
-    }
+    public BeveragePage() throws IOException {}
 
     public void validateBeverages() {
         waitForElement(listView);

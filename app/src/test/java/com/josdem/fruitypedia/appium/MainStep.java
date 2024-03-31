@@ -21,16 +21,13 @@ import io.cucumber.java.en.When;
 
 public class MainStep {
 
-    private WebElement textView;
-
-    private Logger log = Logger.getLogger(this.getClass().getName());
-
     private CategoryPage categoryPage = new CategoryPage();
     private BeveragePage beveragePage = new BeveragePage();
     private RecipePage recipePage = new RecipePage();
 
-    public MainStep() throws IOException {
-    }
+    private Logger log = Logger.getLogger(this.getClass().getName());
+
+    public MainStep() throws IOException {}
 
     @Given("A categories view")
     public void shouldValidateCategoriesExist() {

@@ -18,9 +18,7 @@ public class CategoryPage extends BasePage {
     private RemoteWebElement textView;
 
 
-    public CategoryPage() throws IOException {
-        super();
-    }
+    public CategoryPage() throws IOException {}
 
     public void validateCategories() {
         waitForElement(listView);
