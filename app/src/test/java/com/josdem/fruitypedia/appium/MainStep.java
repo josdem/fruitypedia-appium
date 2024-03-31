@@ -5,7 +5,6 @@ import static com.josdem.fruitypedia.appium.pages.BasePage.driver;
 import com.josdem.fruitypedia.appium.pages.BeveragePage;
 import com.josdem.fruitypedia.appium.pages.CategoryPage;
 import com.josdem.fruitypedia.appium.pages.RecipePage;
-import com.josdem.fruitypedia.appium.util.ConfigurationReader;
 
 import org.openqa.selenium.WebElement;
 
@@ -24,7 +23,6 @@ public class MainStep {
 
     private WebElement textView;
 
-    private Long timeToSleep = Long.parseLong(ConfigurationReader.getProperty("appium.sleep"));
     private Logger log = Logger.getLogger(this.getClass().getName());
 
     private CategoryPage categoryPage = new CategoryPage();
