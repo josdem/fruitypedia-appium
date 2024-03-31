@@ -6,5 +6,5 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "src/test/resources")
+@CucumberOptions(plugin = {"json:target/reports/cucumberTests.json", "html:target/reports/report.html"}, features = "src/test/resources/features", glue = {"com.josdem.fruitypedia.appium"})
 public class CucumberTest {}
