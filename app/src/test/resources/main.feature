@@ -3,4 +3,5 @@ Feature: Category to recipe user flow
     Given A categories view
     When I click in the first category
       And I validate list beverages
-    Then I click on the first beverage
+      And I click on the first beverage
+    Then I validate recipe view

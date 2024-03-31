@@ -2,6 +2,7 @@ package com.josdem.fruitypedia.appium;
 
 import com.josdem.fruitypedia.appium.pages.BeveragePage;
 import com.josdem.fruitypedia.appium.pages.CategoryPage;
+import com.josdem.fruitypedia.appium.pages.RecipePage;
 import com.josdem.fruitypedia.appium.util.ConfigurationReader;
 
 import org.openqa.selenium.WebElement;
@@ -24,6 +25,7 @@ public class MainStep {
 
     private CategoryPage categoryPage = new CategoryPage();
     private BeveragePage beveragePage = new BeveragePage();
+    private RecipePage recipePage = new RecipePage();
 
     public MainStep() throws IOException {
     }
@@ -50,6 +52,12 @@ public class MainStep {
     public void shouldClickOnFirstBeverage() {
         log.info("Running: I should be able to click on first beverage at " + LocalDate.now());
         beveragePage.clickOnFirstBeverage();
+    }
+
+    @And("I validate recipe view")
+    public void shouldValidateRecipeView() {
+        log.info("Running: I should validate recipe view at " + LocalDate.now());
+        recipePage.validateRecipe();
     }
 
 
