@@ -1,5 +1,7 @@
 package com.josdem.fruitypedia.appium;
 
+import static com.josdem.fruitypedia.appium.pages.BasePage.driver;
+
 import com.josdem.fruitypedia.appium.pages.BeveragePage;
 import com.josdem.fruitypedia.appium.pages.CategoryPage;
 import com.josdem.fruitypedia.appium.pages.RecipePage;
@@ -11,6 +13,8 @@ import java.io.IOException;
 import java.time.LocalDate;
 import java.util.logging.Logger;
 
+import io.appium.java_client.android.nativekey.AndroidKey;
+import io.appium.java_client.android.nativekey.KeyEvent;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -60,5 +64,15 @@ public class MainStep {
         recipePage.validateRecipe();
     }
 
+    @And("I should back to beverage section")
+    public void shouldBackToBeverageSection() {
+        log.info("Running: I should back to the beverage section at " + LocalDate.now());
+        driver.pressKey(new KeyEvent(AndroidKey.BACK));
+    }
 
+    @Then("I should back to category section")
+    public void shouldBackToCategorySection() {
+        log.info("Running: I should back to the category section at " + LocalDate.now());
+        driver.pressKey(new KeyEvent(AndroidKey.BACK));
+    }
 }

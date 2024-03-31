@@ -7,11 +7,12 @@ import org.openqa.selenium.support.PageFactory;
 import java.io.IOException;
 
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
 public class BasePage {
 
-    public static AppiumDriver driver;
+    public static AndroidDriver driver;
 
     public BasePage() throws IOException {
         driver = DriverManager.getDriver();

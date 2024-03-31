@@ -15,10 +15,10 @@ import io.appium.java_client.android.AndroidDriver;
 
 public class DriverManager {
 
-    private static AppiumDriver driver;
+    private static AndroidDriver driver;
     private static final AppiumService appiumService = new AppiumServiceImpl();
     private static DesiredCapabilities capabilities = new DesiredCapabilities();
-    public static AppiumDriver getDriver() throws IOException {
+    public static AndroidDriver getDriver() throws IOException {
         if (driver == null) {
             appiumService.setCapabilities(capabilities);
             driver = new AndroidDriver(new URL(ConfigurationReader.getProperty("appium.server")), capabilities);
