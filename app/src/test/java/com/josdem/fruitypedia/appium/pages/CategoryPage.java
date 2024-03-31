@@ -24,10 +24,10 @@ public class CategoryPage extends BasePage {
 
     public void validateCategories() {
         waitForElement(listView);
-        assertEquals("Healing", textView.getText());
     }
 
     public void clickOnFirstCategory() {
+        assertEquals("Healing", textView.getText());
         textView.click();
     }
 }
