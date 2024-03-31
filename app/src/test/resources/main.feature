@@ -1,10 +1,9 @@
 Feature: Category to recipe user flow
   Scenario: User is able to see a recipe based on category
-    When I launch the application
-    And I validate categories are visible
-    And I should be able to click in the category
-    And I should be able to list beverages
-    And I should be able to click in a beverage
-    And I should be able to view a recipe
-    And I should back to beverage section
+    Given A categories view
+    When I click in the first category
+      And I validate list beverages
+      And I click on the first beverage
+      And I validate recipe view
+      And I should back to beverage section
     Then I should back to category section
