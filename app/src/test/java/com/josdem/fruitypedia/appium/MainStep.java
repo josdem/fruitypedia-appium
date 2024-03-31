@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.time.LocalDate;
 import java.util.logging.Logger;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -39,10 +40,16 @@ public class MainStep {
         categoryPage.clickOnFirstCategory();
     }
 
-    @Then("I validate list beverages")
+    @And("I validate list beverages")
     public void shouldValidateListBeverages() {
         log.info("Running: I should be able to validate list beverages at " + LocalDate.now());
         beveragePage.validateBeverages();
+    }
+
+    @And("I click on the first beverage")
+    public void shouldClickOnFirstBeverage() {
+        log.info("Running: I should be able to click on first beverage at " + LocalDate.now());
+        beveragePage.clickOnFirstBeverage();
     }
 
 
