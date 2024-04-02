@@ -6,7 +6,9 @@ import static org.junit.Assert.assertEquals;
 import org.openqa.selenium.remote.RemoteWebElement;
 
 import java.io.IOException;
+import java.util.stream.IntStream;
 
+import io.appium.java_client.pagefactory.AndroidBy;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 
 public class CategoryPage extends BasePage {
@@ -17,6 +19,11 @@ public class CategoryPage extends BasePage {
     @AndroidFindBy(id = "categoryTextView")
     private RemoteWebElement textView;
 
+    @AndroidFindBy(id = "toolbar")
+    private RemoteWebElement toolBar;
+
+    @AndroidFindBy(id = "android:id/message")
+    private RemoteWebElement message;
 
     public CategoryPage() throws IOException {}
 
@@ -27,5 +34,15 @@ public class CategoryPage extends BasePage {
     public void clickOnFirstCategory() {
         assertEquals("Healing", textView.getText());
         textView.click();
+    }
+
+    public void clickOnToolbar(Integer times) {
+        IntStream.rangeClosed(1, times).forEach(
+                it -> waitForElement(toolBar).click()
+        );
+    }
+
+    public void validateMessage() {
+        waitForElement(message);
     }
 }

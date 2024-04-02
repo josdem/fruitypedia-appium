@@ -21,6 +21,10 @@ dependencies {
     testImplementation "junit:junit:$junitVersion"
 }
 
+test {
+    systemProperty "cucumber.options", System.getProperty("cucumber.options")
+}
+
 java {
     sourceCompatibility = JavaVersion.VERSION_21
     targetCompatibility = JavaVersion.VERSION_21

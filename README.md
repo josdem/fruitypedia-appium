@@ -10,7 +10,7 @@ Fruitypedia Appium
 #### To run the project
 ```bash
 appium --base-path=/wd/hub
-gradle testDebug
+./gradlew test
 ```
 
 #### Read this as reference
